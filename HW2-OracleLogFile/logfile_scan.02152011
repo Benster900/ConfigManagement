@@ -1,0 +1,14 @@
+Received Date format from the first line[main] [ 2011-02-15 15:52:36.635 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[main] [ 2011-02-15 15:52:48.629 EST ] [OracleHome.initOptions:1224]  ORA-27154: post/wait create failed
+ORA-27300: OS system dependent operation:semget failed with status: 28
+ORA-27301: OS failure message: No space left on device
+ORA-27302: failure occurred at: sskgpsemsper
+oracle.sysman.assistants.util.sqlEngine.SQLFatalErrorException: ORA-27154: post/wait create failed
+ORA-27300: OS system dependent operation:semget failed with status: 28
+ORA-27301: OS failure message: No space left on device
+ORA-27302: failure occurred at: sskgpsemsper
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.186 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.780 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.944 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.857 EST ] [OFSUtil.doIsACFSPartition:291]  CmdToolUtil execute failed. boolean result = false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.063 EST ] [OFSUtil.doIsACFSPartition:291]  CmdToolUtil execute failed. boolean result = false

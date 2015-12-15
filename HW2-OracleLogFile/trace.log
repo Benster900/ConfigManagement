@@ -1,0 +1,1044 @@
+[main] [ 2011-02-15 15:52:36.002 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[main] [ 2011-02-15 15:52:36.004 EST ] [HAUtils.<init>:188]  oui location /u01/app/oraInventory/ContentsXML
+[main] [ 2011-02-15 15:52:36.036 EST ] [Version.isPre:274]  version to be checked 11.2.0.1.0 major version to check against10
+[main] [ 2011-02-15 15:52:36.036 EST ] [Version.isPre:285]  isPre.java: Returning FALSE
+[main] [ 2011-02-15 15:52:36.103 EST ] [OCR.loadLibrary:308]  
+ Inside constructor of OCR
+[main] [ 2011-02-15 15:52:36.126 EST ] [OCR.loadLibrary:316]  Going to load the ocr library
+[main] [ 2011-02-15 15:52:36.127 EST ] [sPlatform.isHybrid:67]  osName=Linux osArch=i386 rc=false
+[main] [ 2011-02-15 15:52:36.128 EST ] [sPlatform.isHybrid:67]  osName=Linux osArch=i386 rc=false
+[main] [ 2011-02-15 15:52:36.128 EST ] [Library.load:254]  Loading  library /u01/app/oracle/product/11.2.0/db_1/lib/libsrvmocr11.so
+[main] [ 2011-02-15 15:52:36.335 EST ] [OCR.loadLibrary:318]  loaded ocr libraries
+[main] [ 2011-02-15 15:52:36.335 EST ] [OCR.isCluster:939]  Calling OCRNative for isCluster()
+[main] [ 2011-02-15 15:52:36.370 EST ] [OCR.isCluster:943]  OCR Result status = true
+[main] [ 2011-02-15 15:52:36.370 EST ] [OCR.isCluster:955]  Bolean result = false
+[main] [ 2011-02-15 15:52:36.370 EST ] [HAUtils.getHASHome:583]  Oracle home from system properties: /u01/app/oracle/product/11.2.0/db_1
+[main] [ 2011-02-15 15:52:36.370 EST ] [HAUtils.getCRSHome:540]  Getting configured CRS/HAS home for Oracle home ( /u01/app/oracle/product/11.2.0/db_1 ) ...
+[main] [ 2011-02-15 15:52:36.374 EST ] [GETCRSHOMEUtil.<init>:76]  Toolname: getcrshome   ---    Tool location: /u01/app/oracle/product/11.2.0/db_1/srvm/adminTool dependencies: [Ljava.lang.String;@16dc861
+[main] [ 2011-02-15 15:52:36.374 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[main] [ 2011-02-15 15:52:36.375 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[main] [ 2011-02-15 15:52:36.375 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[main] [ 2011-02-15 15:52:36.376 EST ] [RuntimeExec.runCommand:77]  -c 
+[main] [ 2011-02-15 15:52:36.376 EST ] [RuntimeExec.runCommand:77]  /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome 
+[Thread-2] [ 2011-02-15 15:52:36.414 EST ] [StreamReader.run:61]  In StreamReader.run 
+[main] [ 2011-02-15 15:52:36.415 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[Thread-1] [ 2011-02-15 15:52:36.416 EST ] [StreamReader.run:61]  In StreamReader.run 
+[main] [ 2011-02-15 15:52:36.633 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 1
+[main] [ 2011-02-15 15:52:36.634 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[main] [ 2011-02-15 15:52:36.634 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[main] [ 2011-02-15 15:52:36.634 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[main] [ 2011-02-15 15:52:36.635 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[main] [ 2011-02-15 15:52:36.659 EST ] [HAUtils.isHASConfigured:349]  Ignoring exception in isHASConfigured: PRCT-1011 : Failed to run "getcrshome"
+PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:423)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getCRSHome(HAUtils.java:544)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getHASHome(HAUtils.java:604)
+	at oracle.sysman.assistants.util.hasi.HAUtils.isHASConfigured(HAUtils.java:345)
+	at oracle.sysman.assistants.dbca.ui.DBCAWizard.<init>(DBCAWizard.java:452)
+	at oracle.sysman.assistants.dbca.ui.UIHost.<init>(UIHost.java:268)
+	at oracle.sysman.assistants.dbca.ui.InteractiveHost.<init>(InteractiveHost.java:54)
+	at oracle.sysman.assistants.dbca.Dbca.getHost(Dbca.java:164)
+	at oracle.sysman.assistants.dbca.Dbca.execute(Dbca.java:112)
+	at oracle.sysman.assistants.dbca.Dbca.main(Dbca.java:184)
+Caused by: PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.cmdtools.CmdToolUtil.doexecute(CmdToolUtil.java:376)
+	at oracle.cluster.cmdtools.CmdToolUtil.execute(CmdToolUtil.java:324)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:122)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:100)
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:420)
+	... 9 more
+[main] [ 2011-02-15 15:52:36.660 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:36.661 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:36.661 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:36.665 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:36.666 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:36.666 EST ] [DBCAWizard.removePageFromList:1248]  DBCAWizard->removePageFromList: The page to be removed = NetworkConfPage
+[main] [ 2011-02-15 15:52:37.054 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: null
+[main] [ 2011-02-15 15:52:37.061 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[main] [ 2011-02-15 15:52:37.062 EST ] [OracleHome.getVersion:896]  Homeinfo /u01/app/oracle/product/11.2.0/db_1,1
+[main] [ 2011-02-15 15:52:37.581 EST ] [OracleHome.getVersion:922]  OracleHome.server.getVersion Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.581 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.582 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:37.582 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.582 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.583 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:37.584 EST ] [CommonUtils.createPasswordFile:604]  calling new orapwd for 11.1 or higher
+[main] [ 2011-02-15 15:52:37.590 EST ] [OsUtilsBase.execProg:2032]  beginning execProg with input array.
+[main] [ 2011-02-15 15:52:37.863 EST ] [OsUtilsBase.execProg:2068]  finished execProg with input array. Status:0
+[main] [ 2011-02-15 15:52:37.863 EST ] [OracleHome.initOptions:1204]  Initializing Database Options with  for dummy sid=DBUA0 using initfile=/u01/app/oracle/product/11.2.0/db_1/dbs/initDBUA0.ora using pwdfile=/u01/app/oracle/product/11.2.0/db_1/dbs/orapwDBUA0
+[main] [ 2011-02-15 15:52:37.870 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.870 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.870 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:37.871 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.871 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.872 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:37.872 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.875 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.875 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:37.875 EST ] [SQLPlusEngine.getCmmdParams:222]  m_home 11.2.0.1.0
+[main] [ 2011-02-15 15:52:37.876 EST ] [SQLPlusEngine.getCmmdParams:223]  version > 112 true
+[main] [ 2011-02-15 15:52:37.877 EST ] [SQLEngine.getEnvParams:547]  Default NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:37.877 EST ] [SQLEngine.getEnvParams:557]  NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:37.893 EST ] [SQLEngine.initialize:317]  Execing SQLPLUS/SVRMGR process...
+[main] [ 2011-02-15 15:52:37.946 EST ] [SQLEngine.initialize:354]  m_bReaderStarted: false
+[main] [ 2011-02-15 15:52:37.947 EST ] [SQLEngine.initialize:358]  Starting Reader Thread... 
+[main] [ 2011-02-15 15:52:44.378 EST ] [OracleHome.initOptions:1218]  executing: startup nomount pfile='/u01/app/oracle/product/11.2.0/db_1/dbs/initDBUA0.ora'
+[main] [ 2011-02-15 15:52:48.629 EST ] [SQLEngine.done:2148]  Done called
+[main] [ 2011-02-15 15:52:48.629 EST ] [OracleHome.initOptions:1224]  ORA-27154: post/wait create failed
+ORA-27300: OS system dependent operation:semget failed with status: 28
+ORA-27301: OS failure message: No space left on device
+ORA-27302: failure occurred at: sskgpsemsper
+
+oracle.sysman.assistants.util.sqlEngine.SQLFatalErrorException: ORA-27154: post/wait create failed
+ORA-27300: OS system dependent operation:semget failed with status: 28
+ORA-27301: OS failure message: No space left on device
+ORA-27302: failure occurred at: sskgpsemsper
+
+	at oracle.sysman.assistants.util.sqlEngine.SQLEngine.executeImpl(SQLEngine.java:1650)
+	at oracle.sysman.assistants.util.sqlEngine.SQLEngine.executeSql(SQLEngine.java:1898)
+	at oracle.sysman.assistants.util.OracleHome.initOptions(OracleHome.java:1219)
+	at oracle.sysman.assistants.dbca.ui.UIHost.initialize(UIHost.java:304)
+	at oracle.sysman.assistants.dbca.Dbca.execute(Dbca.java:116)
+	at oracle.sysman.assistants.dbca.Dbca.main(Dbca.java:184)
+[main] [ 2011-02-15 15:52:48.630 EST ] [OracleHome.initOptions:1227]  executing: select parameter from v$option where value='TRUE'
+[main] [ 2011-02-15 15:52:48.630 EST ] [SQLEngine.reInitialize:730]  Reinitializing SQLEngine...
+[main] [ 2011-02-15 15:52:48.631 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.631 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.631 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.631 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.632 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.632 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.632 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.633 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.633 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.633 EST ] [SQLPlusEngine.getCmmdParams:222]  m_home 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.633 EST ] [SQLPlusEngine.getCmmdParams:223]  version > 112 true
+[main] [ 2011-02-15 15:52:48.634 EST ] [SQLEngine.getEnvParams:547]  Default NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:48.634 EST ] [SQLEngine.getEnvParams:557]  NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:48.636 EST ] [SQLEngine.initialize:317]  Execing SQLPLUS/SVRMGR process...
+[main] [ 2011-02-15 15:52:48.675 EST ] [SQLEngine.initialize:354]  m_bReaderStarted: false
+[main] [ 2011-02-15 15:52:48.675 EST ] [SQLEngine.initialize:358]  Starting Reader Thread... 
+[main] [ 2011-02-15 15:52:48.677 EST ] [SQLEngine.initialize:407]  Waiting for m_bReaderStarted to be true 
+[main] [ 2011-02-15 15:52:48.834 EST ] [SQLEngine.done:2148]  Done called
+[main] [ 2011-02-15 15:52:48.834 EST ] [OracleHome.initOptions:1253]  ORA-01034: ORACLE not available
+
+oracle.sysman.assistants.util.sqlEngine.SQLFatalErrorException: ORA-01034: ORACLE not available
+
+	at oracle.sysman.assistants.util.sqlEngine.SQLEngine.executeImpl(SQLEngine.java:1650)
+	at oracle.sysman.assistants.util.sqlEngine.SQLEngine.executeQuery(SQLEngine.java:823)
+	at oracle.sysman.assistants.util.OracleHome.initOptions(OracleHome.java:1228)
+	at oracle.sysman.assistants.dbca.ui.UIHost.initialize(UIHost.java:304)
+	at oracle.sysman.assistants.dbca.Dbca.execute(Dbca.java:116)
+	at oracle.sysman.assistants.dbca.Dbca.main(Dbca.java:184)
+[main] [ 2011-02-15 15:52:48.835 EST ] [SQLEngine.reInitialize:730]  Reinitializing SQLEngine...
+[main] [ 2011-02-15 15:52:48.835 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.836 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.836 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.837 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.838 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.838 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.838 EST ] [OracleHome.getVersion:877]  OracleHome.getVersion called.  Current Version: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.838 EST ] [OracleHome.getVersion:943]  Current Version From Inventory: 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.839 EST ] [OracleHome.getVersion:948]  using sqlplus: /u01/app/oracle/product/11.2.0/db_1/bin/sqlplus
+[main] [ 2011-02-15 15:52:48.839 EST ] [SQLPlusEngine.getCmmdParams:222]  m_home 11.2.0.1.0
+[main] [ 2011-02-15 15:52:48.839 EST ] [SQLPlusEngine.getCmmdParams:223]  version > 112 true
+[main] [ 2011-02-15 15:52:48.840 EST ] [SQLEngine.getEnvParams:547]  Default NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:48.840 EST ] [SQLEngine.getEnvParams:557]  NLS_LANG: AMERICAN_AMERICA.AL32UTF8
+[main] [ 2011-02-15 15:52:48.845 EST ] [SQLEngine.initialize:317]  Execing SQLPLUS/SVRMGR process...
+[main] [ 2011-02-15 15:52:48.920 EST ] [SQLEngine.initialize:354]  m_bReaderStarted: false
+[main] [ 2011-02-15 15:52:48.921 EST ] [SQLEngine.initialize:358]  Starting Reader Thread... 
+[main] [ 2011-02-15 15:52:48.922 EST ] [SQLEngine.initialize:407]  Waiting for m_bReaderStarted to be true 
+[main] [ 2011-02-15 15:52:49.050 EST ] [SQLEngine.done:2148]  Done called
+[main] [ 2011-02-15 15:52:49.050 EST ] [OsUtilsBase.deleteFile:1711]  OsUtilsBase.deleteFile: /u01/app/oracle/product/11.2.0/db_1/dbs/initDBUA0.ora
+[main] [ 2011-02-15 15:52:49.051 EST ] [OsUtilsBase.deleteFile:1711]  OsUtilsBase.deleteFile: /u01/app/oracle/product/11.2.0/db_1/dbs/orapwDBUA0
+[main] [ 2011-02-15 15:52:49.051 EST ] [OracleHome.initOptions:1278]  Database Options queried: 0
+[main] [ 2011-02-15 15:52:49.527 EST ] [Host.checkOPS:2370]  Inside checkOPS
+[main] [ 2011-02-15 15:52:49.527 EST ] [Host.checkOPS:2382]  Trying to check cluster existence
+[main] [ 2011-02-15 15:52:49.536 EST ] [Version.isPre:274]  version to be checked 11.2.0.1.0 major version to check against10
+[main] [ 2011-02-15 15:52:49.536 EST ] [Version.isPre:285]  isPre.java: Returning FALSE
+[main] [ 2011-02-15 15:52:49.537 EST ] [OCR.loadLibrary:308]  
+ Inside constructor of OCR
+[main] [ 2011-02-15 15:52:49.537 EST ] [OCR.isCluster:939]  Calling OCRNative for isCluster()
+[main] [ 2011-02-15 15:52:49.537 EST ] [OCR.isCluster:943]  OCR Result status = true
+[main] [ 2011-02-15 15:52:49.538 EST ] [OCR.isCluster:955]  Bolean result = false
+[main] [ 2011-02-15 15:52:49.538 EST ] [Host.checkOPS:2388]  cluster existence:false
+[main] [ 2011-02-15 15:52:49.538 EST ] [Host.checkOPS:2429]  Cluster installed=false
+[main] [ 2011-02-15 15:52:50.078 EST ] [Host.cleanup:3407]  Dbca exit status is: 0
+[main] [ 2011-02-15 15:52:50.078 EST ] [Host.cleanup:3410]  check point context null
+[main] [ 2011-02-15 15:52:50.081 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[main] [ 2011-02-15 15:52:50.081 EST ] [InventoryUtil.getHomeName:111]  homeName = OraDb11g_home1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.042 EST ] [InventoryUtil.getOracleBase:147]  Getting ORACLE_BASE from inventory.
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.044 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.044 EST ] [InventoryUtil.getOracleBase:162]  Inventory Home Size = 1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.044 EST ] [InventoryUtil.getOracleBase:187]  ORACLE_BASE returned from inventory:= /u01/app/oracle
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.045 EST ] [Host.displayOracleBaseWarning:1194]  oracleBaseFromEnv null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.045 EST ] [Host.displayOracleBaseWarning:1200]  oracle_base from OUI  /u01/app/oracle oracle_base from env/u01/app/oracle
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.061 EST ] [HAUtils.getHASHome:583]  Oracle home from system properties: /u01/app/oracle/product/11.2.0/db_1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.061 EST ] [HAUtils.getCRSHome:540]  Getting configured CRS/HAS home for Oracle home ( /u01/app/oracle/product/11.2.0/db_1 ) ...
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.062 EST ] [GETCRSHOMEUtil.<init>:76]  Toolname: getcrshome   ---    Tool location: /u01/app/oracle/product/11.2.0/db_1/srvm/adminTool dependencies: [Ljava.lang.String;@16dc861
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.062 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.072 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.073 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.073 EST ] [RuntimeExec.runCommand:77]  -c 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.073 EST ] [RuntimeExec.runCommand:77]  /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome 
+[Thread-13] [ 2011-02-15 15:52:55.147 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.147 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[Thread-12] [ 2011-02-15 15:52:55.148 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.174 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.182 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.182 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.186 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.186 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:55.187 EST ] [DatabaseOperationsPage.reinitialize:519]  PRCT-1011 : Failed to run "getcrshome"
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.695 EST ] [HAUtils.getHASHome:583]  Oracle home from system properties: /u01/app/oracle/product/11.2.0/db_1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.695 EST ] [HAUtils.getCRSHome:540]  Getting configured CRS/HAS home for Oracle home ( /u01/app/oracle/product/11.2.0/db_1 ) ...
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.696 EST ] [GETCRSHOMEUtil.<init>:76]  Toolname: getcrshome   ---    Tool location: /u01/app/oracle/product/11.2.0/db_1/srvm/adminTool dependencies: [Ljava.lang.String;@16dc861
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.696 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.697 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.698 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.699 EST ] [RuntimeExec.runCommand:77]  -c 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.700 EST ] [RuntimeExec.runCommand:77]  /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome 
+[Thread-15] [ 2011-02-15 15:52:56.777 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.777 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[Thread-14] [ 2011-02-15 15:52:56.778 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.779 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.779 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.779 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.780 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.780 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.783 EST ] [HAUtils.isHASConfigured:349]  Ignoring exception in isHASConfigured: PRCT-1011 : Failed to run "getcrshome"
+PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:423)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getCRSHome(HAUtils.java:544)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getHASHome(HAUtils.java:604)
+	at oracle.sysman.assistants.util.hasi.HAUtils.isHASConfigured(HAUtils.java:345)
+	at oracle.sysman.assistants.dbca.ui.DatabaseOperationsPage.validate(DatabaseOperationsPage.java:323)
+	at oracle.sysman.assistants.util.wizard.WizardPageExt.wizardValidatePage(WizardPageExt.java:214)
+	at oracle.ewt.wizard.WizardPage.processWizardValidateEvent(Unknown Source)
+	at oracle.ewt.wizard.WizardPage.validatePage(Unknown Source)
+	at oracle.ewt.wizard.BaseWizard.validateSelectedPage(Unknown Source)
+	at oracle.ewt.wizard.BaseWizard.doNext(Unknown Source)
+	at oracle.sysman.assistants.util.wizard.WizardExt.doNext(WizardExt.java:265)
+	at oracle.ewt.wizard.BaseWizard$Action.actionPerformed(Unknown Source)
+	at oracle.ewt.button.PushButton.processActionEvent(Unknown Source)
+	at oracle.ewt.button.PushButton.processEventImpl(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.redispatchEvent(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.processEvent(Unknown Source)
+	at oracle.ewt.button.PushButton.activate(Unknown Source)
+	at oracle.ewt.lwAWT.AbstractButton.processMouseReleased(Unknown Source)
+	at oracle.ewt.lwAWT.AbstractButton.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Component.java:5282)
+	at java.awt.Container.processEvent(Container.java:1966)
+	at oracle.ewt.lwAWT.LWComponent.processEventImpl(Unknown Source)
+	at oracle.ewt.button.PushButton.processEventImpl(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.redispatchEvent(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Component.java:3984)
+	at java.awt.Container.dispatchEventImpl(Container.java:2024)
+	at java.awt.Component.dispatchEvent(Component.java:3819)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3892)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+	at java.awt.Container.dispatchEventImpl(Container.java:2010)
+	at java.awt.Window.dispatchEventImpl(Window.java:1791)
+	at java.awt.Component.dispatchEvent(Component.java:3819)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+Caused by: PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.cmdtools.CmdToolUtil.doexecute(CmdToolUtil.java:376)
+	at oracle.cluster.cmdtools.CmdToolUtil.execute(CmdToolUtil.java:324)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:122)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:100)
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:420)
+	... 39 more
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.859 EST ] [HAUtils.getHASHome:583]  Oracle home from system properties: /u01/app/oracle/product/11.2.0/db_1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.859 EST ] [HAUtils.getCRSHome:540]  Getting configured CRS/HAS home for Oracle home ( /u01/app/oracle/product/11.2.0/db_1 ) ...
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.859 EST ] [GETCRSHOMEUtil.<init>:76]  Toolname: getcrshome   ---    Tool location: /u01/app/oracle/product/11.2.0/db_1/srvm/adminTool dependencies: [Ljava.lang.String;@16dc861
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.860 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.864 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.864 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.865 EST ] [RuntimeExec.runCommand:77]  -c 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.865 EST ] [RuntimeExec.runCommand:77]  /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome 
+[Thread-17] [ 2011-02-15 15:52:56.904 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.904 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[Thread-16] [ 2011-02-15 15:52:56.905 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.943 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 1
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.943 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.943 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.944 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.944 EST ] [CmdToolUtil.doexecute:372]  nativeSystem.runRemoteExecCmd failed. Command = /u01/app/oracle/product/11.2.0/db_1/srvm/admin/getcrshome arguments = [] env = null
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.945 EST ] [HAUtils.isHASConfigured:349]  Ignoring exception in isHASConfigured: PRCT-1011 : Failed to run "getcrshome"
+PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:423)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getCRSHome(HAUtils.java:544)
+	at oracle.sysman.assistants.util.hasi.HAUtils.getHASHome(HAUtils.java:604)
+	at oracle.sysman.assistants.util.hasi.HAUtils.isHASConfigured(HAUtils.java:345)
+	at oracle.sysman.assistants.dbca.ui.DatabaseOperationsPage.validate(DatabaseOperationsPage.java:356)
+	at oracle.sysman.assistants.util.wizard.WizardPageExt.wizardValidatePage(WizardPageExt.java:214)
+	at oracle.ewt.wizard.WizardPage.processWizardValidateEvent(Unknown Source)
+	at oracle.ewt.wizard.WizardPage.validatePage(Unknown Source)
+	at oracle.ewt.wizard.BaseWizard.validateSelectedPage(Unknown Source)
+	at oracle.ewt.wizard.BaseWizard.doNext(Unknown Source)
+	at oracle.sysman.assistants.util.wizard.WizardExt.doNext(WizardExt.java:265)
+	at oracle.ewt.wizard.BaseWizard$Action.actionPerformed(Unknown Source)
+	at oracle.ewt.button.PushButton.processActionEvent(Unknown Source)
+	at oracle.ewt.button.PushButton.processEventImpl(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.redispatchEvent(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.processEvent(Unknown Source)
+	at oracle.ewt.button.PushButton.activate(Unknown Source)
+	at oracle.ewt.lwAWT.AbstractButton.processMouseReleased(Unknown Source)
+	at oracle.ewt.lwAWT.AbstractButton.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Component.java:5282)
+	at java.awt.Container.processEvent(Container.java:1966)
+	at oracle.ewt.lwAWT.LWComponent.processEventImpl(Unknown Source)
+	at oracle.ewt.button.PushButton.processEventImpl(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.redispatchEvent(Unknown Source)
+	at oracle.ewt.lwAWT.LWComponent.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Component.java:3984)
+	at java.awt.Container.dispatchEventImpl(Container.java:2024)
+	at java.awt.Component.dispatchEvent(Component.java:3819)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3892)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+	at java.awt.Container.dispatchEventImpl(Container.java:2010)
+	at java.awt.Window.dispatchEventImpl(Window.java:1791)
+	at java.awt.Component.dispatchEvent(Component.java:3819)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+Caused by: PRCT-1011 : Failed to run "getcrshome"
+	at oracle.cluster.cmdtools.CmdToolUtil.doexecute(CmdToolUtil.java:376)
+	at oracle.cluster.cmdtools.CmdToolUtil.execute(CmdToolUtil.java:324)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:122)
+	at oracle.cluster.cmdtools.GETCRSHOMEUtil.getCRS_HOME(GETCRSHOMEUtil.java:100)
+	at oracle.cluster.deployment.ClusterwareInfo.getConfiguredCRSHome(ClusterwareInfo.java:420)
+	... 39 more
+[AWT-EventQueue-0] [ 2011-02-15 15:52:56.947 EST ] [DatabaseOperationsPage.validate:380]  isHARegistrationRequired : false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.783 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.783 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.784 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.786 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.787 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.788 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.788 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.789 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.792 EST ] [InitParamHandler.endElement:524]  CustomSGA flag: false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.792 EST ] [InitParamHandler.endElement:525]  Database Type: MULTIPURPOSE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.793 EST ] [InitParamHandler.endElement:526]  Mem Percentage: 40
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.808 EST ] [InitParamHandler.endElement:559]  Total memory MB: 598
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.810 EST ] [OsUtilsBase.is64Bit:353]  architecture is 64 bit: false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.813 EST ] [MemoryCalculator.<clinit>:102]  setting memory minimums for 32 bit
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.820 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.820 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /proc
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.821 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /sys
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.821 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /dev/pts
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.821 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /boot
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.822 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /dev/shm
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.822 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:388]  /dev/shm Feasible: true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.822 EST ] [InitParamHandler.endElement:575]  /dev/shm size in MB: 748
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.828 EST ] [StorageAttributes.setAttribute:240]  IN threadID:1 group#=1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.829 EST ] [StorageAttributes.setAttribute:240]  IN threadID:1 group#=2
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.829 EST ] [StorageAttributes.setAttribute:249]  Current threadID=1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.829 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[0]=1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.830 EST ] [StorageAttributes.setAttribute:266]  vRedoGroups:[1]
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.830 EST ] [StorageAttributes.setAttribute:296]  setAttribute: bExists=false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.831 EST ] [StorageAttributes.setAttribute:240]  IN threadID:1 group#=3
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.831 EST ] [StorageAttributes.setAttribute:249]  Current threadID=1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.833 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[0]=1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.833 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[1]=2
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.833 EST ] [StorageAttributes.setAttribute:266]  vRedoGroups:[1, 2]
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.834 EST ] [StorageAttributes.setAttribute:296]  setAttribute: bExists=false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.834 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/sysaux01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.836 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/users01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.836 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.837 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/temp01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.837 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/undotbs01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.960 EST ] [Verifier.getDatabaseSize:3148]  TableSpace 'TEMP' is of type Temp, skipping.
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.961 EST ] [Verifier.getControlfFileSizes:3498]  No. of Control files:=2
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.961 EST ] [Verifier.getDatabaseSize:3192]  dbSize: 1541120 redoLogSize: 153600 ctrlFileSize: 4096
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.962 EST ] [TemplateManager.getParsedAttributes:1828]  Setting DB_RECOVERY_FILE_SIZE to default size: 4977
+[AWT-EventQueue-0] [ 2011-02-15 15:53:01.965 EST ] [TemplatesPage.validate:592]  TemplatePage -> true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:04.843 EST ] [DatabaseNamePage.onNameChanged:687]  m_oldGDBName = 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:04.844 EST ] [DatabaseNamePage.validate:572]  isSIDRequired :true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:04.944 EST ] [ManagementOptionsPage.initializePage:736]  Enumerating Agents
+[AWT-EventQueue-0] [ 2011-02-15 15:53:05.045 EST ] [InstallGroupImpl.<init>:109]  OUI_LOC_PROPERTY = oracle.installer.oui_loc
+[AWT-EventQueue-0] [ 2011-02-15 15:53:05.062 EST ] [ClusterwareInfo.isHAInstalled:235]  PRCI-1124 : Oracle Restart home does not exist on the local node
+[AWT-EventQueue-0] [ 2011-02-15 15:53:07.177 EST ] [ManagementOptionsPage.validate:1094]  emConfigChkBox State: false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:07.178 EST ] [ManagementOptionsPage.validate:1095]  switchChkBox State: false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.795 EST ] [DatabaseAreaPage.validateStorageDest:666]  Checking if '{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system01.dbf' is ACFS location
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.796 EST ] [Verifier.checkIfACFS:1920]  check ACFS: {ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.797 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /var/lib/nfs/rpc_pipefs/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.797 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /sys/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.797 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/sys/fs/binfmt_misc/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.798 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/fs/vmblock/mountPoint/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.799 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.799 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /dev/shm/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.799 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /dev/pts/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.800 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /boot/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.800 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.800 EST ] [HAUtils.isACFSFileSystem:1855]  Mount point is : /
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.803 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.804 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.804 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.804 EST ] [RuntimeExec.runCommand:77]  -c 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.805 EST ] [RuntimeExec.runCommand:77]  /sbin//acfsutil info fs -o ismountpoint / 
+[Thread-23] [ 2011-02-15 15:53:21.853 EST ] [StreamReader.run:61]  In StreamReader.run 
+[Thread-23] [ 2011-02-15 15:53:21.854 EST ] [StreamReader.run:65]  ERROR>/bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.854 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.855 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 127
+[Thread-22] [ 2011-02-15 15:53:21.855 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.855 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.856 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.856 EST ] [RuntimeExec.runCommand:173]  /bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.857 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.857 EST ] [OFSUtil.doIsACFSPartition:287]  result.getBooleanResult() = false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.857 EST ] [OFSUtil.doIsACFSPartition:291]  CmdToolUtil execute failed. boolean result = false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.858 EST ] [OFSUtil.print_outputTrace:1348]  result[0] = /bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.858 EST ] [Verifier.checkIfACFS:1943]  /u01/app/oracle/oradata/jobs/system01.dbf is ACFS :false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.876 EST ] [DatabaseAreaPage.validate:1254]  Storage Attribute OMF Mode false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.876 EST ] [DatabaseAreaPage.validate:1255]  Storage Attribute OSM Mode false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:21.876 EST ] [DatabaseAreaPage.validate:1256]  set omf param false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.008 EST ] [Verifier.checkIfACFS:1920]  check ACFS: /u01/app/oracle/flash_recovery_area/jobs
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.009 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /var/lib/nfs/rpc_pipefs/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.010 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /sys/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.010 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/sys/fs/binfmt_misc/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.010 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/fs/vmblock/mountPoint/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.010 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /proc/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.011 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /dev/shm/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.011 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /dev/pts/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.011 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /boot/
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.011 EST ] [OsUtilsBase.getMountPoint:2661]  mount point to be verified /
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.012 EST ] [HAUtils.isACFSFileSystem:1855]  Mount point is : /
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.012 EST ] [NativeSystem.isCmdScv:471]  isCmdScv: cmd=[]
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.012 EST ] [RuntimeExec.runCommand:75]  Calling Runtime.exec() with the command 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.013 EST ] [RuntimeExec.runCommand:77]  /bin/sh 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.014 EST ] [RuntimeExec.runCommand:77]  -c 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.014 EST ] [RuntimeExec.runCommand:77]  /sbin//acfsutil info fs -o ismountpoint / 
+[Thread-25] [ 2011-02-15 15:53:51.055 EST ] [StreamReader.run:61]  In StreamReader.run 
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.056 EST ] [RuntimeExec.runCommand:142]  runCommand: Waiting for the process
+[Thread-24] [ 2011-02-15 15:53:51.056 EST ] [StreamReader.run:61]  In StreamReader.run 
+[Thread-25] [ 2011-02-15 15:53:51.058 EST ] [StreamReader.run:65]  ERROR>/bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.059 EST ] [RuntimeExec.runCommand:144]  runCommand: process returns 127
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.060 EST ] [RuntimeExec.runCommand:161]  RunTimeExec: output>
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.060 EST ] [RuntimeExec.runCommand:170]  RunTimeExec: error>
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.060 EST ] [RuntimeExec.runCommand:173]  /bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.061 EST ] [RuntimeExec.runCommand:192]  Returning from RunTimeExec.runCommand
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.061 EST ] [OFSUtil.doIsACFSPartition:287]  result.getBooleanResult() = false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.063 EST ] [OFSUtil.doIsACFSPartition:291]  CmdToolUtil execute failed. boolean result = false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.063 EST ] [OFSUtil.print_outputTrace:1348]  result[0] = /bin/sh: /sbin//acfsutil: No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.063 EST ] [Verifier.checkIfACFS:1943]  /u01/app/oracle/flash_recovery_area/jobs is ACFS :false
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.065 EST ] [CommonVerifier.getNearestExistingParentFile:1108]  /u01/app/oracle/flash_recovery_area/jobs already exists
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.065 EST ] [Verifier.validateFRASize:746]  Free Space left on /u01/app/oracle/flash_recovery_area/jobs: 36824
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.065 EST ] [Verifier.validateFRASize:754]  Required FRA size : 10
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.067 EST ] [Verifier.getDatabaseSize:3148]  TableSpace 'TEMP' is of type Temp, skipping.
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.067 EST ] [Verifier.getControlfFileSizes:3498]  No. of Control files:=2
+[AWT-EventQueue-0] [ 2011-02-15 15:53:51.067 EST ] [Verifier.getDatabaseSize:3192]  dbSize: 1541120 redoLogSize: 153600 ctrlFileSize: 4096
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.515 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.516 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.516 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.517 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.517 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.518 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.518 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.519 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.519 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.520 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.521 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.521 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.521 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.522 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.522 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.523 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.523 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.524 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.524 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.524 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.525 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.525 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.525 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.526 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.526 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.526 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.527 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.527 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.528 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.528 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.528 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.529 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.529 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.533 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.534 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.534 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.534 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.535 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.535 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.535 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.536 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.536 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.537 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.537 EST ] [DBOptionsTabPage$SelectionHelper.loadTableSpaces:715]  DB has temp tbs:=TEMP undo tbs:=UNDOTBS1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:52.538 EST ] [DBOptionsTabPage$SelectionHelper.loadTableSpaces:715]  DB has temp tbs:=TEMP undo tbs:=UNDOTBS1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.621 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.623 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.623 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.623 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.623 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.624 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.624 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.624 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.624 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.625 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.625 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.625 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.625 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.626 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.626 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.626 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.627 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.627 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.627 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.627 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.628 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.628 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.628 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.629 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.629 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.629 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.631 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.631 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.632 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.632 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.632 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.633 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.633 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.633 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.633 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.634 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.634 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.635 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.635 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.635 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.635 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.636 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:53.636 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.061 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.062 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.063 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.063 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.063 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.064 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.067 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.067 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.068 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.068 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.068 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.069 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.069 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.075 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.076 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.076 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.077 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.077 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.077 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.077 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.078 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.078 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.078 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.078 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.079 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.079 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.079 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.080 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.080 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.080 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.080 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.081 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.081 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.081 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.081 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.082 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.082 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.084 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.084 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.084 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.084 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.085 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.085 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.397 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.399 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.399 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.400 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.401 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.403 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.403 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.403 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.404 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.404 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.404 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.405 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.406 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.407 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.407 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.407 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.408 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.408 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.408 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.408 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.409 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.409 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.409 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.409 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.410 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.410 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.410 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.411 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.411 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.411 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.411 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.412 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.412 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.412 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.413 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.413 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.413 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.414 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.415 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.415 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.415 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.415 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.417 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.730 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.732 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.732 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.732 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.733 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.735 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.735 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.735 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.735 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.736 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.736 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.738 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.738 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.738 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.739 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.739 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.740 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.740 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.740 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.740 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.741 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.741 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.741 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.741 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.742 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.742 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.742 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.743 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.743 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.743 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.743 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.744 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.744 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.744 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.744 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.745 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.745 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.745 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.745 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.746 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.746 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.746 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:54.747 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.237 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.239 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.239 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.239 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.240 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.242 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.242 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.242 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.242 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.243 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.243 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.246 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.247 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.247 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.248 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.248 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.249 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.249 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.249 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.250 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.250 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.250 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.250 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.251 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.251 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.251 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.256 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.257 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.257 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.258 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.258 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.258 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.259 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.259 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.259 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.259 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.260 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.260 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.260 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.260 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.261 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.261 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.261 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.896 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.897 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.897 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.897 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.898 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.898 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible APEX
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.898 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:55.899 EST ] [DBOptionsTabPage$SelectionHelper.loadTableSpaces:715]  DB has temp tbs:=TEMP undo tbs:=UNDOTBS1
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.901 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.902 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.903 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.903 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.903 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.905 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible APEX
+[AWT-EventQueue-0] [ 2011-02-15 15:53:56.905 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.459 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.461 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.464 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.464 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.464 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.465 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible APEX
+[AWT-EventQueue-0] [ 2011-02-15 15:53:58.465 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.316 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.328 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.329 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.329 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.329 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.333 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.334 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.334 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.334 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.334 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.335 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.336 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.336 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.337 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.338 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.339 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.341 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.342 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.342 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.342 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.342 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.343 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.343 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.343 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.343 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.344 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.344 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.362 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.363 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.363 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.363 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.364 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.364 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.364 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.365 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.365 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.365 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.366 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.366 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.366 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.367 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.367 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.367 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.368 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible ORACLE_TEXT
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.370 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.370 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.370 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.370 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.371 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.371 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.371 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.371 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.372 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.372 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.372 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.373 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.373 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.383 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SAMPLE_SCHEMA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.383 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.383 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.384 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.384 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.384 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.384 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Spatial
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.385 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Spatial is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.385 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible SPATIAL
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.385 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.385 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.386 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.386 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible EM_REPOSITORY
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.397 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OWB
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.397 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.398 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.398 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible IMEDIA
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.398 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.398 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible XDB_PROTOCOLS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.399 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: OLAP
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.399 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option OLAP is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.399 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible CWMLITE
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.400 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible JSERVER
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.400 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Database Vault
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.400 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Database Vault is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.400 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible DV
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.401 EST ] [OracleHome.isDatabaseOptionOn:1116]  Checking Database Option: Oracle Label Security
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.401 EST ] [OracleHome.isDatabaseOptionOn:1165]  Database Option Oracle Label Security is true
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.401 EST ] [StepManager.areDependentsFeasible:639]  StepManager ->areDependentsFeasible OMS
+[AWT-EventQueue-0] [ 2011-02-15 15:53:59.402 EST ] [DBOptionsTabPage$SelectionHelper.loadTableSpaces:715]  DB has temp tbs:=TEMP undo tbs:=UNDOTBS1
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.703 EST ] [Verifier.processRawConfigFile:4019]  StorageType == 0
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.704 EST ] [DatabaseOptionPage.doNext:273]  processRawConfigFile=false
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.738 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.738 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /boot
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.739 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /dev/pts
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.739 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:381]  Volume: /dev/shm
+[AWT-EventQueue-0] [ 2011-02-15 15:54:06.741 EST ] [MemoryCalculator.isUnifiedMemoryFeasible:388]  /dev/shm Feasible: true
+[AWT-EventQueue-0] [ 2011-02-15 15:54:13.806 EST ] [InitParametersPage.actionPerformed:384]  InitParametersPage->actionPerformed: Calling constructorh method
+[AWT-EventQueue-0] [ 2011-02-15 15:54:13.812 EST ] [InitParamAttributes.sortParams:3774]  m_sortOn:-1 sortOn:0
+[AWT-EventQueue-0] [ 2011-02-15 15:54:28.237 EST ] [AllInitParamsDialog.actionPerformed:425]  Listing the advance parameters, please wait...
+[AWT-EventQueue-0] [ 2011-02-15 15:55:41.246 EST ] [OsUtilsBase.getScratchPath:500]  scratch location /u01/app/oracle/cfgtoollogs
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.495 EST ] [OsUtilsUnix.getKernelParam:1050]  Kernel Parameter: shmmax value4294967295
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.498 EST ] [InitParametersPage.validate:228]  InitParametersPage->validate: in SPFile condition
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.499 EST ] [InitParametersPage.validate:232]  original spFileName with variables ={ORACLE_HOME}/dbs/spfile{SID}.ora
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.499 EST ] [Verifier.validateSPFile:5153]  The SPFILE={ORACLE_HOME}/dbs/spfile{SID}.ora
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.499 EST ] [ClusterUtils.validateRawDevice:760]  Inside validateRawDevice
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.500 EST ] [sPlatform.isHybrid:67]  osName=Linux osArch=i386 rc=false
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.500 EST ] [Library.load:245]  Property oracle.installer.library_loc is set to value=/u01/app/oracle/product/11.2.0/db_1/oui/lib/linux
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.501 EST ] [Library.load:247]  Loading  library /u01/app/oracle/product/11.2.0/db_1/oui/lib/linux/libsrvm11.so
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.513 EST ] [ClusterUtils.validateRawDevice:772]  Device Exception
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.514 EST ] [ClusterUtils.isRaw:738]  No such file or directory
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.514 EST ] [InitParametersPage.validate:340]  InitParametersPage->validate: calling createUndoAttributes
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.702 EST ] [StoragePage.selectAndExpandItem:353]  item=oracle.sysman.emSDK.client.dataComponent.dataDrivenTree.TreeParentNode[label=Storage,index=0]
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.708 EST ] [StoragePage.selectAndExpandItem:362]  item.isExpanded=true
+[AWT-EventQueue-0] [ 2011-02-15 15:55:47.709 EST ] [StoragePage.selectAndExpandItem:373]  selection.isSelected(item)=false
+[AWT-EventQueue-0] [ 2011-02-15 15:55:58.910 EST ] [DBCAVttgControlfileProxy.getVtoObject:123]  DBCAVttgControlfileProxy: In getVtoObject function
+[AWT-EventQueue-0] [ 2011-02-15 15:58:11.052 EST ] [StoragePage.getVtoObject:735]  StoragePage->getVtoObject: type = oracle_sysman_tablespaces
+[Thread-27] [ 2011-02-15 15:58:26.392 EST ] [StoragePage.objectCreated:601]  StoragePage: In objectCreated function
+[Thread-27] [ 2011-02-15 15:58:26.393 EST ] [StoragePage.objectCreated:608]  StoragePage->objectCreated: type = oracle_sysman_tablespace
+[AWT-EventQueue-0] [ 2011-02-15 15:58:27.539 EST ] [StoragePage.getVtoObject:735]  StoragePage->getVtoObject: type = oracle_sysman_tablespaces
+[Thread-28] [ 2011-02-15 15:59:03.757 EST ] [StoragePage.objectCreated:601]  StoragePage: In objectCreated function
+[Thread-28] [ 2011-02-15 15:59:03.757 EST ] [StoragePage.objectCreated:608]  StoragePage->objectCreated: type = oracle_sysman_tablespace
+[AWT-EventQueue-0] [ 2011-02-15 15:59:23.187 EST ] [StorageAttributes.updateDatafileAttr:762]  original.name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/sysaux01.dbf currattr.name=/u02/app/oracle/oradata/jobs/sysaux01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:23.188 EST ] [StorageAttributes.updateDatafileAttr:781]  dfAttr: path= name=/u02/app/oracle/oradata/jobs/sysaux01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:23.188 EST ] [StorageAttributes.updateDatafileAttr:783]  original: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/sysaux01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:23.188 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name=/u02/app/oracle/oradata/jobs/sysaux01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:33.997 EST ] [StorageAttributes.updateDatafileAttr:762]  original.name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system01.dbf currattr.name=/u03/app/oracle/oradata/jobs/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:33.997 EST ] [StorageAttributes.updateDatafileAttr:781]  dfAttr: path= name=/u03/app/oracle/oradata/jobs/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:33.997 EST ] [StorageAttributes.updateDatafileAttr:783]  original: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:33.998 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name=/u03/app/oracle/oradata/jobs/system01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:45.703 EST ] [StorageAttributes.updateDatafileAttr:762]  original.name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/temp01.dbf currattr.name=/u04/app/oracle/oradata/jobs/temp01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:45.704 EST ] [StorageAttributes.updateDatafileAttr:781]  dfAttr: path= name=/u04/app/oracle/oradata/jobs/temp01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:45.704 EST ] [StorageAttributes.updateDatafileAttr:783]  original: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/temp01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:45.704 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name=/u04/app/oracle/oradata/jobs/temp01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:59.171 EST ] [StorageAttributes.updateDatafileAttr:762]  original.name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/undotbs01.dbf currattr.name=/u05/app/oracle/oradata/jobs/undotbs01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:59.171 EST ] [StorageAttributes.updateDatafileAttr:781]  dfAttr: path= name=/u05/app/oracle/oradata/jobs/undotbs01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:59.171 EST ] [StorageAttributes.updateDatafileAttr:783]  original: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/undotbs01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 15:59:59.173 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name=/u05/app/oracle/oradata/jobs/undotbs01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 16:00:06.154 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:00:06.154 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:06.155 EST ] [RedoLogGroupsComparator.compare:73]  val1=2 val2=3
+[AWT-EventQueue-0] [ 2011-02-15 16:00:06.155 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:07.708 EST ] [StorageAttributes.updateDatafileAttr:762]  original.name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/users01.dbf currattr.name=/u06/app/oracle/oradata/jobs/users01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 16:00:07.709 EST ] [StorageAttributes.updateDatafileAttr:781]  dfAttr: path= name=/u06/app/oracle/oradata/jobs/users01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 16:00:07.709 EST ] [StorageAttributes.updateDatafileAttr:783]  original: path= name={ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/users01.dbf
+[AWT-EventQueue-0] [ 2011-02-15 16:00:07.709 EST ] [StorageAttributes.removeDatafile:887]  datafile: path= name=/u06/app/oracle/oradata/jobs/users01.dbf
+[TaskScheduler timer] [ 2011-02-15 16:00:07.846 EST ] [DBCAVbogRedoLogGroupImpl.getDefaultLogfilePath:327]  defaultPath=/u01/app/oracle/oradata/jobs/
+[AWT-EventQueue-0] [ 2011-02-15 16:00:08.348 EST ] [StoragePage.getVtoObject:895]  StoragePage->getVtoObject: type = oracle_sysman_redologgroup and name = 3
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.237 EST ] [StorageAttributes.removeAttribute:480]  threadNum:1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.238 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.238 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.238 EST ] [RedoLogGroupsComparator.compare:73]  val1=2 val2=3
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.239 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.239 EST ] [RedoLogGroupsComparator.compare:73]  val1=2 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.239 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.240 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=1
+[AWT-EventQueue-0] [ 2011-02-15 16:00:09.240 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[TaskScheduler timer] [ 2011-02-15 16:00:10.262 EST ] [DBCAVbogRedoLogGroupImpl.getDefaultLogfilePath:327]  defaultPath=/u01/app/oracle/oradata/jobs/
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.843 EST ] [StorageAttributes.setAttribute:240]  IN threadID:1 group#=1
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.844 EST ] [StorageAttributes.setAttribute:249]  Current threadID=1
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.844 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[0]=1
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.844 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[1]=2
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.844 EST ] [StorageAttributes.setAttribute:266]  vRedoGroups:[2]
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.845 EST ] [StorageAttributes.setAttribute:296]  setAttribute: bExists=false
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.845 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.845 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.846 EST ] [RedoLogGroupsComparator.compare:73]  val1=2 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.846 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.846 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=1
+[AWT-EventQueue-0] [ 2011-02-15 16:03:40.847 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[TaskScheduler timer] [ 2011-02-15 16:03:40.952 EST ] [DBCAVbogRedoLogGroupImpl.getDefaultLogfilePath:327]  defaultPath=/u01/app/oracle/oradata/jobs/
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.767 EST ] [StoragePage.validate:995]  StoragePage: In validate function
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.875 EST ] [StorageAttributes.setAttribute:240]  IN threadID:1 group#=2
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.875 EST ] [StorageAttributes.setAttribute:249]  Current threadID=1
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.875 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[0]=1
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.876 EST ] [StorageAttributes.setAttribute:256]  Current threadID=1 ==> redoGroups[1]=2
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.876 EST ] [StorageAttributes.setAttribute:266]  vRedoGroups:[1]
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.876 EST ] [StorageAttributes.setAttribute:296]  setAttribute: bExists=false
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.876 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.877 EST ] [RedoLogGroupsComparator.compare:93]  result=-1
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.877 EST ] [RedoLogGroupsComparator.compare:73]  val1=2 val2=2
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.878 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.878 EST ] [RedoLogGroupsComparator.compare:73]  val1=1 val2=1
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.878 EST ] [RedoLogGroupsComparator.compare:93]  result=0
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.976 EST ] [Verifier.validateTemplate:2007]  StorageType == 0
+[AWT-EventQueue-0] [ 2011-02-15 16:04:00.980 EST ] [CreationOptionPage.setSaveTemplateVisible:467]  Setting save template visible = true
+[AWT-EventQueue-0] [ 2011-02-15 16:04:23.259 EST ] [DBCAWizard.onFinish:1134]  m_bFinishClicked: false
+[Thread-30] [ 2011-02-15 16:04:23.589 EST ] [UIHost.getHtmlSummary:1081]  UIHost:getHtmlSummary: running createTemplateDocument NOT for SHOW_TEMPLATE condition
+[Thread-30] [ 2011-02-15 16:04:23.600 EST ] [UIHost.getHtmlSummary:1087]  UIHost:getHtmlSummary: after running createTemplateDocument NOT for SHOW_TEMPLATE condition
+[Thread-30] [ 2011-02-15 16:04:23.611 EST ] [XSLConst.generateHeaderXSL:214]  NLS:Template Name:= null
+[Thread-30] [ 2011-02-15 16:04:23.612 EST ] [XSLConst.generateHeaderXSL:219]  Template Description:= Use this template to create a customized database.
+[Thread-30] [ 2011-02-15 16:04:23.924 EST ] [UIHost.getHtmlSummary:1117]  UIHost->getHtmlSummary: start printing of transformed document
+[TaskScheduler timer] [ 2011-02-15 16:04:43.356 EST ] [Host.executeSteps:4887]  Executing steps....
+[TaskScheduler timer] [ 2011-02-15 16:04:43.357 EST ] [Host.setUpForOperation:3473]  setUpForOperation: Mode = 2
+[TaskScheduler timer] [ 2011-02-15 16:04:43.418 EST ] [Host.executeSteps:5054]  setupForOperation returned: true
+[TaskScheduler timer] [ 2011-02-15 16:04:43.419 EST ] [Host.createStepSQLInterface:6949]  sid =JOBS
+[TaskScheduler timer] [ 2011-02-15 16:04:43.419 EST ] [Host.createStepSQLInterface:6950]  sidOrConnectString JOBS
+[Thread-35] [ 2011-02-15 16:04:43.484 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[Thread-35] [ 2011-02-15 16:04:43.485 EST ] [InventoryUtil.getHomeName:111]  homeName = OraDb11g_home1
+[Thread-35] [ 2011-02-15 16:04:43.493 EST ] [StepManager.getSteps:338]  StepManager isHARegitrationRequired : false
+[Thread-35] [ 2011-02-15 16:04:43.507 EST ] [StepContext$ModeRunner.run:2657]  ---- Progress Needed:=true
+[Thread-35] [ 2011-02-15 16:04:43.957 EST ] [BasicStep.execute:202]  Executing Step : DB_ENTRY
+[Thread-35] [ 2011-02-15 16:04:43.957 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01501
+[Thread-35] [ 2011-02-15 16:04:43.957 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01092
+[Thread-35] [ 2011-02-15 16:04:43.957 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01034
+[Thread-35] [ 2011-02-15 16:04:43.958 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-03114
+[Thread-35] [ 2011-02-15 16:04:43.958 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-12560
+[Thread-35] [ 2011-02-15 16:04:43.958 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-03113
+[Thread-35] [ 2011-02-15 16:04:43.958 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01031
+[Thread-35] [ 2011-02-15 16:04:43.958 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.199 EST ] [BasicStep.execute:202]  Executing Step : INSTANCE_CREATION
+[Thread-35] [ 2011-02-15 16:04:44.200 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.200 EST ] [InstanceStep.createInitFile:479]  Checking registerWithHAListener
+[Thread-35] [ 2011-02-15 16:04:44.200 EST ] [Host.registerWithHAListener:8544]  m_cmdArgs.m_listenersnull
+[Thread-35] [ 2011-02-15 16:04:44.200 EST ] [Host.registerWithHAListener:8545]  isHARegistrationRequired false
+[Thread-35] [ 2011-02-15 16:04:44.205 EST ] [InitParamAttributes.sortParams:3774]  m_sortOn:0 sortOn:4
+[Thread-35] [ 2011-02-15 16:04:44.209 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param db_block_size
+[Thread-35] [ 2011-02-15 16:04:44.209 EST ] [InitParamAttributes.createInitFile:1813]  The value is 8192
+[Thread-35] [ 2011-02-15 16:04:44.210 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param open_cursors
+[Thread-35] [ 2011-02-15 16:04:44.210 EST ] [InitParamAttributes.createInitFile:1813]  The value is 300
+[Thread-35] [ 2011-02-15 16:04:44.210 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param db_domain
+[Thread-35] [ 2011-02-15 16:04:44.210 EST ] [InitParamAttributes.createInitFile:1813]  The value is ""
+[Thread-35] [ 2011-02-15 16:04:44.210 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param db_name
+[Thread-35] [ 2011-02-15 16:04:44.211 EST ] [InitParamAttributes.createInitFile:1813]  The value is jobs
+[Thread-35] [ 2011-02-15 16:04:44.211 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param core_dump_dest
+[Thread-35] [ 2011-02-15 16:04:44.211 EST ] [InitParamAttributes.createInitFile:1813]  The value is /u01/app/oracle/diag/rdbms/jobs/JOBS/incident/In
+[Thread-35] [ 2011-02-15 16:04:44.211 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param control_files
+[Thread-35] [ 2011-02-15 16:04:44.211 EST ] [InitParamAttributes.createInitFile:1813]  The value is ("/u02/app/oracle/oradata/jobs/control01.ctl", "/u03/app/oracle/oradata/jobs/control02.ctl", "/u04/app/oracle/oradata/jobs/control03.ctl")
+[Thread-35] [ 2011-02-15 16:04:44.212 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param db_recovery_file_dest
+[Thread-35] [ 2011-02-15 16:04:44.212 EST ] [InitParamAttributes.createInitFile:1813]  The value is /u01/app/oracle/flash_recovery_area/jobs
+[Thread-35] [ 2011-02-15 16:04:44.212 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param db_recovery_file_dest_size
+[Thread-35] [ 2011-02-15 16:04:44.212 EST ] [InitParamAttributes.createInitFile:1813]  The value is 10485760
+[Thread-35] [ 2011-02-15 16:04:44.212 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param compatible
+[Thread-35] [ 2011-02-15 16:04:44.213 EST ] [InitParamAttributes.createInitFile:1813]  The value is 11.2.0.0.0
+[Thread-35] [ 2011-02-15 16:04:44.213 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param diagnostic_dest
+[Thread-35] [ 2011-02-15 16:04:44.213 EST ] [InitParamAttributes.createInitFile:1813]  The value is /u01/app/oracle
+[Thread-35] [ 2011-02-15 16:04:44.213 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param memory_target
+[Thread-35] [ 2011-02-15 16:04:44.213 EST ] [InitParamAttributes.createInitFile:1813]  The value is 627048448
+[Thread-35] [ 2011-02-15 16:04:44.214 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param processes
+[Thread-35] [ 2011-02-15 16:04:44.214 EST ] [InitParamAttributes.createInitFile:1813]  The value is 150
+[Thread-35] [ 2011-02-15 16:04:44.214 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param audit_file_dest
+[Thread-35] [ 2011-02-15 16:04:44.214 EST ] [InitParamAttributes.createInitFile:1813]  The value is /u01/app/oracle/admin/jobs/adump
+[Thread-35] [ 2011-02-15 16:04:44.214 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param audit_trail
+[Thread-35] [ 2011-02-15 16:04:44.215 EST ] [InitParamAttributes.createInitFile:1813]  The value is db
+[Thread-35] [ 2011-02-15 16:04:44.215 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param remote_login_passwordfile
+[Thread-35] [ 2011-02-15 16:04:44.215 EST ] [InitParamAttributes.createInitFile:1813]  The value is EXCLUSIVE
+[Thread-35] [ 2011-02-15 16:04:44.215 EST ] [InitParamAttributes.createInitFile:1808]  Processing init param undo_tablespace
+[Thread-35] [ 2011-02-15 16:04:44.215 EST ] [InitParamAttributes.createInitFile:1813]  The value is UNDOTBS1
+[Thread-35] [ 2011-02-15 16:04:44.221 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.223 EST ] [DBEntryStep.executeImpl:254]  undoMgmt=null
+[Thread-35] [ 2011-02-15 16:04:44.223 EST ] [DBEntryStep.executeImpl:255]  undoMgmt=true
+[Thread-35] [ 2011-02-15 16:04:44.223 EST ] [DBEntryStep.executeImpl:274]  undoTBS=UNDOTBS1
+[Thread-35] [ 2011-02-15 16:04:44.226 EST ] [DBEntryStep.executeImpl:390]  undoTBS create SQL=CREATE SMALLFILE UNDO TABLESPACE "UNDOTBS1" DATAFILE '/u05/app/oracle/oradata/jobs/undotbs01.dbf' SIZE 200M REUSE AUTOEXTEND ON NEXT  5120K MAXSIZE UNLIMITED
+[Thread-35] [ 2011-02-15 16:04:44.227 EST ] [DBEntryStep.executeImpl:439]  0th redoLogText = GROUP 1 ('/u02/app/oracle/oradata/jobs/redo01a.log', '/u05/app/oracle/oradata/jobs/redo01b.log') SIZE 51200K
+[Thread-35] [ 2011-02-15 16:04:44.227 EST ] [DBEntryStep.executeImpl:439]  1th redoLogText = GROUP 2 ('/u03/app/oracle/oradata/jobs/redo02a.log', '/u06/app/oracle/oradata/jobs/redo02b.log') SIZE 51200K
+[Thread-35] [ 2011-02-15 16:04:44.227 EST ] [DBEntryStep.executeImpl:456]  CREATEDB without passwords = CREATE DATABASE "jobs"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+DATAFILE '/u03/app/oracle/oradata/jobs/system01.dbf' SIZE 700M REUSE AUTOEXTEND ON NEXT  10240K MAXSIZE UNLIMITED
+EXTENT MANAGEMENT LOCAL
+SYSAUX DATAFILE '/u02/app/oracle/oradata/jobs/sysaux01.dbf' SIZE 600M REUSE AUTOEXTEND ON NEXT  10240K MAXSIZE UNLIMITED
+SMALLFILE DEFAULT TEMPORARY TABLESPACE TEMP TEMPFILE '/u04/app/oracle/oradata/jobs/temp01.dbf' SIZE 20M REUSE AUTOEXTEND ON NEXT  640K MAXSIZE UNLIMITED
+SMALLFILE UNDO TABLESPACE "UNDOTBS1" DATAFILE '/u05/app/oracle/oradata/jobs/undotbs01.dbf' SIZE 200M REUSE AUTOEXTEND ON NEXT  5120K MAXSIZE UNLIMITED
+CHARACTER SET WE8MSWIN1252
+NATIONAL CHARACTER SET AL16UTF16
+LOGFILE GROUP 1 ('/u02/app/oracle/oradata/jobs/redo01a.log', '/u05/app/oracle/oradata/jobs/redo01b.log') SIZE 51200K,
+GROUP 2 ('/u03/app/oracle/oradata/jobs/redo02a.log', '/u06/app/oracle/oradata/jobs/redo02b.log') SIZE 51200K
+[Thread-35] [ 2011-02-15 16:04:44.234 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.234 EST ] [StepContext$ModeRunner.run:2657]  ---- Progress Needed:=true
+[Thread-35] [ 2011-02-15 16:04:44.240 EST ] [BasicStep.execute:202]  Executing Step : DB_CREATE_FILES
+[Thread-35] [ 2011-02-15 16:04:44.240 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.241 EST ] [DBCreateFilesStep.executeImpl:325]  creating TBS SQL=CREATE SMALLFILE TABLESPACE "CO_OP" LOGGING DATAFILE '/u07/app/oracle/oradata/jobs/coop01.dbf' SIZE 5M EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT  AUTO 
+[Thread-35] [ 2011-02-15 16:04:44.244 EST ] [DBCreateFilesStep.executeImpl:325]  creating TBS SQL=CREATE SMALLFILE TABLESPACE "INDEXES" LOGGING DATAFILE '/u08/app/oracle/oradata/jobs/indexes01.dbf' SIZE 5M EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT  AUTO 
+[Thread-35] [ 2011-02-15 16:04:44.246 EST ] [DBCreateFilesStep.executeImpl:325]  creating TBS SQL=CREATE SMALLFILE TABLESPACE "USERS" LOGGING DATAFILE '/u06/app/oracle/oradata/jobs/users01.dbf' SIZE 5M REUSE AUTOEXTEND ON NEXT  1280K MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT  AUTO 
+[Thread-35] [ 2011-02-15 16:04:44.246 EST ] [DBCreateFilesStep.executeImpl:331]  Establish USERS as the default permanent tablespace of the database
+[Thread-35] [ 2011-02-15 16:04:44.249 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.249 EST ] [StepContext$ModeRunner.run:2657]  ---- Progress Needed:=true
+[Thread-35] [ 2011-02-15 16:04:44.260 EST ] [BasicStep.execute:202]  Executing Step : DB_CATALOG
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-00942
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-00955
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01432
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01434
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01918
+[Thread-35] [ 2011-02-15 16:04:44.261 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01919
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-01921
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-02289
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-04043
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-29807
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setFatalErrors:322]  setting Fatal Error: ORA-29833
+[Thread-35] [ 2011-02-15 16:04:44.262 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-00942
+[Thread-35] [ 2011-02-15 16:04:44.263 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-00955
+[Thread-35] [ 2011-02-15 16:04:44.263 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-01432
+[Thread-35] [ 2011-02-15 16:04:44.263 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-01434
+[Thread-35] [ 2011-02-15 16:04:44.263 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-01918
+[Thread-35] [ 2011-02-15 16:04:44.263 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-01919
+[Thread-35] [ 2011-02-15 16:04:44.264 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-01921
+[Thread-35] [ 2011-02-15 16:04:44.264 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-02289
+[Thread-35] [ 2011-02-15 16:04:44.264 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-04043
+[Thread-35] [ 2011-02-15 16:04:44.264 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-29807
+[Thread-35] [ 2011-02-15 16:04:44.264 EST ] [StepErrorHandler.setIgnorableErrors:250]  setting Ignorable Error: ORA-29833
+[Thread-35] [ 2011-02-15 16:04:44.265 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.283 EST ] [BasicStep.execute:202]  Executing Step : SQL_PLUS_HELP
+[Thread-35] [ 2011-02-15 16:04:44.283 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.289 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.290 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.291 EST ] [StepContext$ModeRunner.run:2657]  ---- Progress Needed:=true
+[Thread-35] [ 2011-02-15 16:04:44.297 EST ] [BasicStep.execute:202]  Executing Step : POST_DB_CREATION
+[Thread-35] [ 2011-02-15 16:04:44.298 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.300 EST ] [BasicStep.execute:202]  Executing Step : ACCOUNT_LOCK
+[Thread-35] [ 2011-02-15 16:04:44.300 EST ] [BasicStep.configureSettings:304]  messageHandler being set=null
+[Thread-35] [ 2011-02-15 16:04:44.304 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[Thread-35] [ 2011-02-15 16:04:44.305 EST ] [PostDBCreationStep.executeImpl:501]  before recomp_serial 
+[Thread-35] [ 2011-02-15 16:04:44.305 EST ] [PostDBCreationStep.executeImpl:507]  after recomp_serial 
+[Thread-35] [ 2011-02-15 16:04:44.307 EST ] [PostDBCreationStep.executeImpl:635]  PostDBCreationStep: bShared=false
+[Thread-35] [ 2011-02-15 16:04:44.307 EST ] [Host.startupDBWithApprInitFile:7257]  startDBWithApp: startup clause=
+[Thread-35] [ 2011-02-15 16:04:44.309 EST ] [BasicStep.configureSettings:304]  messageHandler being set=oracle.sysman.assistants.util.UIMessageHandler@30f369
+[TaskScheduler timer] [ 2011-02-15 16:04:57.091 EST ] [Host.cleanup:3407]  Dbca exit status is: 0
+[TaskScheduler timer] [ 2011-02-15 16:04:57.091 EST ] [Host.cleanup:3410]  check point context null
+[TaskScheduler timer] [ 2011-02-15 16:04:57.093 EST ] [InventoryUtil.getOUIInvSession:347]  setting OUI READ level to ACCESSLEVEL_READ_LOCKLESS
+[TaskScheduler timer] [ 2011-02-15 16:04:57.093 EST ] [InventoryUtil.getHomeName:111]  homeName = OraDb11g_home1
